@@ -4,5 +4,5 @@
 - 정규식으로 원하는 문자열이 포함된 리터럴만 탐색 가능
 
 ```
-node src/app.js scan "C:\git\Moai\GDScripts" "/[가-힣]/" --g true
+node src/app.js scan "C:\git\Moai\GDScripts" --regex "/[가-힣]/" --g true
 ```
