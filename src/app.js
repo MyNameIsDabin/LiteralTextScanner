@@ -18,6 +18,11 @@ const argv = require('yargs')
         type: 'string',
         description: '정규식으로 찾기'
     })
+    .option('onlytext', {
+        alias: 't',
+        type: 'boolean',
+        description: '텍스트 배열로만 뽑기'
+    })
     .argv;
 const DEFAULT_JSON_FILE_NAME = "output.json";
 
@@ -52,12 +57,16 @@ const findLiteralTextList = (text, regex) => {
     return findTextList;
 };
 
-const fileContentsToJSONArray = (fileContents, regex) => {
+const fileContentsToJSONArray = (fileContents, regex, isOnlyText) => {
     const jsonArr = [];
+    const textArr = [];
     fileContents.forEach(({
         filePath,
         contents
     }) => {
+        const data = {
+            [filePath]: []
+        };
         contents.forEach((line, index) => {
             const findTextList = findLiteralTextList(line, regex);
             const contentsList = findTextList.map((text) => ({
@@ -65,14 +74,16 @@ const fileContentsToJSONArray = (fileContents, regex) => {
                 "text": text
             }));
             if (findTextList && findTextList.length > 0) {
-                jsonArr.push({
-                    "filePath": filePath,
-                    "contents": contentsList
-                });
+                data[filePath].push(...contentsList);
+                textArr.push(...contentsList.map(({text})=>text));
             };
-        })
+        });
+        if (data[filePath] && data[filePath].length > 0) {
+            jsonArr.push(data);
+        }
     });
-    return jsonArr;
+
+    return isOnlyText ? textArr : jsonArr;
 }
 
 if (argv.dir) {
@@ -80,9 +91,8 @@ if (argv.dir) {
     regExp.global = argv.global || false;
     (async () => {
         const fileContents = await readFileContents(argv.dir);
-        const jsonArr = fileContentsToJSONArray(fileContents, regExp);
-        console.log(jsonArr[0].contents);
-        // await fsPromises.writeFile(path.join(argv.dir, argv.json || DEFAULT_JSON_FILE_NAME), JSON.stringify(jsonArr));
+        let jsonArr = fileContentsToJSONArray(fileContents, regExp, argv.onlytext);
+        await fsPromises.writeFile(path.join(argv.output || DEFAULT_JSON_FILE_NAME), JSON.stringify(jsonArr));
         console.log("추출 완료");
     })();
 }
