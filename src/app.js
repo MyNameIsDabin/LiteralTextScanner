@@ -70,7 +70,7 @@ const fileContentsToJSONArray = (fileContents, regex, isOnlyText) => {
         contents.forEach((line, index) => {
             const findTextList = findLiteralTextList(line, regex);
             const contentsList = findTextList.map((text) => ({
-                "line": index,
+                "line": index+1,
                 "text": text
             }));
             if (findTextList && findTextList.length > 0) {
