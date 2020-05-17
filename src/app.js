@@ -8,22 +8,18 @@ const argv = require('yargs')
                 describe: '추출할 디렉토리 or 파일 경로'
             })
     })
-    .option('json', {
-        alias: 'j',
+    .option('output', {
+        alias: 'o',
         type: 'string',
-        description: 'json 파일로 추출할 파일명'
+        description: '추출할 JSON 파일명'
     })
     .option('regex', {
         alias: 'r',
         type: 'string',
         description: '정규식으로 찾기'
     })
-    .option('global', {
-        alias: 'g',
-        type: 'boolean',
-        description: '정규식 글로벌 적용여부'
-    })
     .argv;
+const DEFAULT_JSON_FILE_NAME = "output.json";
 
 const readFileContents = async (dir) => {
     const bufferToString = (buffer) => buffer.toString().split('\n');
@@ -62,9 +58,12 @@ const fileContentsToJSONArray = (fileContents, regex) => {
         filePath,
         contents
     }) => {
-        contents.forEach((line) => {
+        contents.forEach((line, index) => {
             const findTextList = findLiteralTextList(line, regex);
-            const contentsList = findTextList.map((text)=>({"line":line, "text":text}));
+            const contentsList = findTextList.map((text) => ({
+                "line": index,
+                "text": text
+            }));
             if (findTextList && findTextList.length > 0) {
                 jsonArr.push({
                     "filePath": filePath,
@@ -81,8 +80,9 @@ if (argv.dir) {
     regExp.global = argv.global || false;
     (async () => {
         const fileContents = await readFileContents(argv.dir);
-        console.log(fileContentsToJSONArray(fileContents, regExp));
+        const jsonArr = fileContentsToJSONArray(fileContents, regExp);
+        console.log(jsonArr[0].contents);
+        // await fsPromises.writeFile(path.join(argv.dir, argv.json || DEFAULT_JSON_FILE_NAME), JSON.stringify(jsonArr));
+        console.log("추출 완료");
     })();
 }
-// fs.writeFileSync("pullout.json", JSON.stringify(fileSheet));
-// console.log("추출 완료");
