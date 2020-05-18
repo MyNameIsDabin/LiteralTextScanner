@@ -5,7 +5,7 @@ const argv = require('yargs')
     .command('scan [dir] [options]', '파일 내 텍스트를 추출합니다', (yargs) => {
         yargs
             .positional('dir', {
-                describe: '추출할 디렉토리 or 파일 경로'
+                describe: '추출할 디렉토리 (, 로 구분)'
             })
     })
     .option('output', {
@@ -18,6 +18,11 @@ const argv = require('yargs')
         type: 'string',
         description: '정규식으로 찾기'
     })
+    .option('ext', {
+        alias: 'e',
+        type: 'string',
+        description: '탐색할 파일의 확장자 (, 로 구분)'
+    })
     .option('onlytext', {
         alias: 't',
         type: 'boolean',
@@ -26,10 +31,10 @@ const argv = require('yargs')
     .argv;
 const DEFAULT_JSON_FILE_NAME = "output.json";
 
-const readFileContents = async (dir) => {
+const readFileContents = async (dir, extList) => {
     const bufferToString = (buffer) => buffer.toString().split('\n');
     const filePath = (dir, fileName) => path.join(dir, fileName);
-    const files = await fsPromises.readdir(dir);
+    const files = (await fsPromises.readdir(dir)).filter((fileName) => !extList || extList.includes(path.extname(fileName).replace(".", "")));
     const buffers = await Promise.all(files.map((fileName) => fsPromises.readFile(filePath(dir, fileName))));
     const fileDatas = files.map((fileName, index) => {
         return {
@@ -70,12 +75,14 @@ const fileContentsToJSONArray = (fileContents, regex, isOnlyText) => {
         contents.forEach((line, index) => {
             const findTextList = findLiteralTextList(line, regex);
             const contentsList = findTextList.map((text) => ({
-                "line": index+1,
+                "line": index + 1,
                 "text": text
             }));
             if (findTextList && findTextList.length > 0) {
                 data[filePath].push(...contentsList);
-                textArr.push(...contentsList.map(({text})=>text));
+                textArr.push(...contentsList.map(({
+                    text
+                }) => text));
             };
         });
         if (data[filePath] && data[filePath].length > 0) {
@@ -89,15 +96,18 @@ const fileContentsToJSONArray = (fileContents, regex, isOnlyText) => {
 const trim = (text) => text.replace(/\s/gi, "");
 
 if (argv.dir) {
-    const dirList = argv.dir.split(",").map(dir=>trim(dir));
+    const argvList = (argvs) => argvs.split(",").map(argv => trim(argv));
+    const dirList = argv.dir && argvList(argv.dir);
+    const extList = argv.ext && argvList(argv.ext);
     const regExp = new RegExp(argv.regex);
     regExp.global = argv.global || false;
     (async () => {
-        dirList.forEach(dir=>{
-            const fileContents = await readFileContents(dir);
-            let jsonArr = fileContentsToJSONArray(fileContents, regExp, argv.onlytext);
-            await fsPromises.writeFile(path.join(argv.output || DEFAULT_JSON_FILE_NAME), JSON.stringify(jsonArr));
-        })
+        const jsonArr = (await Promise.all(dirList.map(async (dir) => {
+            const fileContents = await readFileContents(dir, extList);
+            return fileContentsToJSONArray(fileContents, regExp, argv.onlytext);
+        }))).reduce((lc, rc) => lc.concat(rc));
+
+        await fsPromises.writeFile(path.join(argv.output || DEFAULT_JSON_FILE_NAME), JSON.stringify(jsonArr));
         console.log("추출 완료");
     })();
 }
