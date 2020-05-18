@@ -80,15 +80,10 @@ const fileContentsToJSONArray = (fileContents, regex, isOnlyText) => {
         };
         contents.forEach((line, index) => {
             const findTextList = findLiteralTextList(line, regex);
-            const contentsList = findTextList.map((text) => ({
-                "line": index + 1,
-                "text": text
-            }));
+            const contentsList = findTextList.map((text) => ({ "line": index + 1, "text": text }));
             if (findTextList && findTextList.length > 0) {
                 data[filePath].push(...contentsList);
-                textArr.push(...contentsList.map(({
-                    text
-                }) => text));
+                textArr.push(...contentsList.map(({ text }) => text));
             };
         });
         if (data[filePath] && data[filePath].length > 0) {
