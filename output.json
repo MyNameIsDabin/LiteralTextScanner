@@ -815,4 +815,738 @@
         "line": 262,
         "text": "소환하기"
     }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Common\\CommonPopup.tscn": [{
+        "line": 191,
+        "text": "팝업"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\ButtonDeckEdit.tscn": [{
+        "line": 24,
+        "text": "덱 편집"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\ButtonNoticeBirds.tscn": [{
+        "line": 546,
+        "text": "스테이지 시작"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\DailyRewardButton.tscn": [{
+        "line": 180,
+        "text": "지급완료"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\GameOverUI.tscn": [{
+        "line": 242,
+        "text": "사망했습니다.."
+    }, {
+        "line": 259,
+        "text": "부활시 골드 지원 + 50 (매력지수 적용)"
+    }, {
+        "line": 300,
+        "text": "광고보고 부활하기"
+    }, {
+        "line": 330,
+        "text": "스테이지 보상"
+    }, {
+        "line": 351,
+        "text": "스테이지 보상"
+    }, {
+        "line": 396,
+        "text": "유물 레벨 1 (0/0)"
+    }, {
+        "line": 413,
+        "text": "루비 0개"
+    }, {
+        "line": 430,
+        "text": "유물 경험치 0"
+    }, {
+        "line": 450,
+        "text": "보상 획득하고 맵 선택 화면으로"
+    }, {
+        "line": 460,
+        "text": "나의 최고 스테이지: 100"
+    }, {
+        "line": 481,
+        "text": "< 현재 스테이지: 100 >"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\LabelSlider.tscn": [{
+        "line": 51,
+        "text": "배경음"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\LabelWithSeparator.tscn": [{
+        "line": 26,
+        "text": "테스트"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\ListItemDictionary.tscn": [{
+        "line": 112,
+        "text": "보관중"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\ListItemHat.tscn": [{
+        "line": 56,
+        "text": "장착하기"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\ListItemMap.tscn": [{
+        "line": 59,
+        "text": "이스터 섬"
+    }, {
+        "line": 75,
+        "text": "챕터 1"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\ListItemMask.tscn": [{
+        "line": 52,
+        "text": "장착하기"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\ListItemMonster.tscn": [{
+        "line": 74,
+        "text": "어쩌구"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\ListItemPackage.tscn": [{
+        "line": 123,
+        "text": "1회 구매 가능"
+    }, {
+        "line": 136,
+        "text": "루비 스타트 패키지"
+    }, {
+        "line": 158,
+        "text": "1회 구매 가능"
+    }, {
+        "line": 182,
+        "text": "표시불가"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\ListItemPackageCapitalism.tscn": [{
+        "line": 116,
+        "text": "이미 구매한 상품입니다"
+    }, {
+        "line": 169,
+        "text": "3배속 버튼"
+    }, {
+        "line": 188,
+        "text": "루비 1500개"
+    }, {
+        "line": 223,
+        "text": "자본주의 모아이 패키지"
+    }, {
+        "line": 248,
+        "text": "이미 구매한 카드는 루비로 환산됩니다."
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\ListItemPackageMusician.tscn": [{
+        "line": 116,
+        "text": "이미 구매한 상품입니다"
+    }, {
+        "line": 169,
+        "text": "3배속 버튼"
+    }, {
+        "line": 188,
+        "text": "루비 1500개"
+    }, {
+        "line": 223,
+        "text": "음악가 모아이 패키지"
+    }, {
+        "line": 248,
+        "text": "이미 구매한 카드는 루비로 환산됩니다."
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\ListItemPackageRuby.tscn": [{
+        "line": 102,
+        "text": "이미 구매한 상품입니다"
+    }, {
+        "line": 136,
+        "text": "x3배속"
+    }, {
+        "line": 147,
+        "text": "3배속 버튼"
+    }, {
+        "line": 168,
+        "text": "루비 1500개"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\ListItemPost.gd": [{
+        "line": 32,
+        "text": "%s시간 %s분 남음"
+    }, {
+        "line": 34,
+        "text": "%s분 남음"
+    }, {
+        "line": 70,
+        "text": "상품이 지급되었습니다"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\ListItemPost.tscn": [{
+        "line": 33,
+        "text": "루비 300개"
+    }, {
+        "line": 36,
+        "text": "어쩌구저쩌구"
+    }, {
+        "line": 46,
+        "text": "우편 받기"
+    }, {
+        "line": 65,
+        "text": "x3배속"
+    }, {
+        "line": 78,
+        "text": "유효기간 : "
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\ListItemRuby.tscn": [{
+        "line": 71,
+        "text": "x3배속"
+    }, {
+        "line": 94,
+        "text": "표시불가"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\ListItemStoneSkin.tscn": [{
+        "line": 56,
+        "text": "장착하기"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\ListItemWeapon.tscn": [{
+        "line": 52,
+        "text": "장착하기"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\Magma.tscn": [{
+        "line": 77,
+        "text": "판매하기"
+    }, {
+        "line": 78,
+        "text": "판매하기"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\MainSceneUI.tscn": [{
+        "line": 366,
+        "text": "뒤로가기"
+    }, {
+        "line": 393,
+        "text": "아이템 상점"
+    }, {
+        "line": 448,
+        "text": "코스튬 상점"
+    }, {
+        "line": 496,
+        "text": "메뉴"
+    }, {
+        "line": 520,
+        "text": "도감"
+    }, {
+        "line": 544,
+        "text": "x1배속"
+    }, {
+        "line": 567,
+        "text": "숨기기"
+    }, {
+        "line": 589,
+        "text": "잠그기"
+    }, {
+        "line": 613,
+        "text": "유물"
+    }, {
+        "line": 632,
+        "text": "루비 상점"
+    }, {
+        "line": 644,
+        "text": "메뉴"
+    }, {
+        "line": 648,
+        "text": "게임설명"
+    }, {
+        "line": 652,
+        "text": "사막 맵 설명"
+    }, {
+        "line": 665,
+        "text": "우편"
+    }, {
+        "line": 669,
+        "text": "알림"
+    }, {
+        "line": 673,
+        "text": "알림"
+    }, {
+        "line": 680,
+        "text": "알림"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\MainShipOnTheSea.tscn": [{
+        "line": 80,
+        "text": "판매하기"
+    }, {
+        "line": 81,
+        "text": "판매하기"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\MapSelectScene.gd": [{
+        "line": 121,
+        "text": "%s %d스테이지 클리어시\\n무료 입장가능"
+    }, {
+        "line": 146,
+        "text": "최고 스테이지 : "
+    }, {
+        "line": 159,
+        "text": "현재 스테이지 : "
+    }, {
+        "line": 216,
+        "text": "아직 구매할 수 없습니다"
+    }, {
+        "line": 233,
+        "text": "보유한 루비가 부족합니다"
+    }, {
+        "line": 379,
+        "text": "준비된 광고가 없습니다"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\MapSelectScene.tscn": [{
+        "line": 254,
+        "text": "입장하기"
+    }, {
+        "line": 272,
+        "text": "구매불가"
+    }, {
+        "line": 290,
+        "text": "구매하기"
+    }, {
+        "line": 348,
+        "text": "새로하기"
+    }, {
+        "line": 366,
+        "text": "구매불가"
+    }, {
+        "line": 384,
+        "text": "구매하기"
+    }, {
+        "line": 410,
+        "text": "변경된 덱은 진행중인 게임에는 적용되지 않습니다"
+    }, {
+        "line": 439,
+        "text": "최고 스테이지 : 0"
+    }, {
+        "line": 468,
+        "text": "현재 스테이지 : 0"
+    }, {
+        "line": 510,
+        "text": "유물"
+    }, {
+        "line": 528,
+        "text": "코스튬 상점"
+    }, {
+        "line": 569,
+        "text": "모아이 덱"
+    }, {
+        "line": 584,
+        "text": "돌 스킨"
+    }, {
+        "line": 602,
+        "text": "메뉴"
+    }, {
+        "line": 618,
+        "text": "루비 상점"
+    }, {
+        "line": 653,
+        "text": "메뉴"
+    }, {
+        "line": 657,
+        "text": "알림"
+    }, {
+        "line": 670,
+        "text": "알림"
+    }, {
+        "line": 674,
+        "text": "알림"
+    }, {
+        "line": 679,
+        "text": "랭크 보상 획득!"
+    }, {
+        "line": 683,
+        "text": "우편"
+    }, {
+        "line": 687,
+        "text": "게임설명"
+    }, {
+        "line": 694,
+        "text": "알림"
+    }, {
+        "line": 697,
+        "text": "게임을 종료합니다"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\MoaiBabyUpgradeUI.tscn": [{
+        "line": 225,
+        "text": "아기 모아이를 강화하세요!"
+    }, {
+        "line": 257,
+        "text": "광고보고 다시 뽑기"
+    }, {
+        "line": 288,
+        "text": "0 루비 사용해서 다시 뽑기"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\MoaiCard.tscn": [{
+        "line": 87,
+        "text": "보관중"
+    }, {
+        "line": 123,
+        "text": "사용중"
+    }, {
+        "line": 195,
+        "text": "비어있음"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\MoaiDeckEditUI.tscn": [{
+        "line": 140,
+        "text": "정렬 방식 :"
+    }, {
+        "line": 153,
+        "text": "항목 0"
+    }, {
+        "line": 177,
+        "text": "※ 덱이 완성되지 않았습니다"
+    }, {
+        "line": 426,
+        "text": "※ 덱이 완성되지 않았습니다"
+    }, {
+        "line": 546,
+        "text": "전체 시너지 보기"
+    }, {
+        "line": 573,
+        "text": "알림"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\MoaiStatNotice.tscn": [{
+        "line": 233,
+        "text": "장착해제"
+    }, {
+        "line": 261,
+        "text": "장착해제"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\PopupCostume.tscn": [{
+        "line": 64,
+        "text": "아기 모아이 코스튬"
+    }, {
+        "line": 65,
+        "text": "모자"
+    }, {
+        "line": 65,
+        "text": "무기"
+    }, {
+        "line": 65,
+        "text": "마스크"
+    }, {
+        "line": 139,
+        "text": "매력포인트 : 999"
+    }, {
+        "line": 198,
+        "text": "코스튬은 착용하지 않아도 능력치가 중첩해서 적용됩니다"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\PopupDailyReward.tscn": [{
+        "line": 34,
+        "text": "일일 보상"
+    }, {
+        "line": 115,
+        "text": "보상 받기"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\PopupDictionary.tscn": [{
+        "line": 9,
+        "text": "모아이 도감"
+    }, {
+        "line": 10,
+        "text": "도감"
+    }, {
+        "line": 10,
+        "text": "시너지"
+    }, {
+        "line": 10,
+        "text": "몬스터"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\PopupEarnDailyReward.tscn": [{
+        "line": 24,
+        "text": "보상 획득!"
+    }, {
+        "line": 48,
+        "text": "보상 획득!"
+    }, {
+        "line": 95,
+        "text": "테스트"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\PopupEnemyDetail.tscn": [{
+        "line": 95,
+        "text": "디버프 면역"
+    }, {
+        "line": 118,
+        "text": "체력 : 0000"
+    }, {
+        "line": 125,
+        "text": "공격력 : 00"
+    }, {
+        "line": 132,
+        "text": "이동속도 : 00"
+    }, {
+        "line": 139,
+        "text": "보유 골드 : 00"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\PopupItemShop.tscn": [{
+        "line": 30,
+        "text": "아이템 상점"
+    }, {
+        "line": 31,
+        "text": "장비"
+    }, {
+        "line": 31,
+        "text": "소모품"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\PopupMoaiDetail.tscn": [{
+        "line": 123,
+        "text": "1 티어"
+    }, {
+        "line": 186,
+        "text": "추가 성장치 :"
+    }, {
+        "line": 355,
+        "text": "이러쿵저러쿵"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\PopupMoaiDetailDeck.tscn": [{
+        "line": 85,
+        "text": "테스트"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\PopupOption.tscn": [{
+        "line": 105,
+        "text": "옵션"
+    }, {
+        "line": 164,
+        "text": "효과음"
+    }, {
+        "line": 210,
+        "text": "랭킹"
+    }, {
+        "line": 236,
+        "text": "업적"
+    }, {
+        "line": 255,
+        "text": "클라우드 저장"
+    }, {
+        "line": 285,
+        "text": "게임설명"
+    }, {
+        "line": 338,
+        "text": "우편"
+    }, {
+        "line": 411,
+        "text": "다빈"
+    }, {
+        "line": 422,
+        "text": "프로그래밍, 기획"
+    }, {
+        "line": 463,
+        "text": "디자인, 기획"
+    }, {
+        "line": 493,
+        "text": "버전: 0.0.0"
+    }, {
+        "line": 501,
+        "text": "누적 플레이 타임: 00시간 00분 00초"
+    }, {
+        "line": 520,
+        "text": "클라이언트 ID :"
+    }, {
+        "line": 555,
+        "text": "복사"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\PopupPost.tscn": [{
+        "line": 39,
+        "text": "우편"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\PopupRankReward.tscn": [{
+        "line": 55,
+        "text": "밸런스 패치로 인한 랭크 보상 획득!"
+    }, {
+        "line": 115,
+        "text": "루비 250개"
+    }, {
+        "line": 144,
+        "text": "돌 스킨"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\PopupRelic.tscn": [{
+        "line": 73,
+        "text": "유물"
+    }, {
+        "line": 152,
+        "text": "유물 레벨 1"
+    }, {
+        "line": 194,
+        "text": "남은 유물 포인트 0"
+    }, {
+        "line": 270,
+        "text": "루비 30개 소모하고 유물 경험치 100 얻기"
+    }, {
+        "line": 522,
+        "text": "유물 포인트 초기화"
+    }, {
+        "line": 536,
+        "text": " 30개 소모하고"
+    }, {
+        "line": 559,
+        "text": "아직 광고를 시청할 수 없어요"
+    }, {
+        "line": 574,
+        "text": "유물 포인트 초기화"
+    }, {
+        "line": 588,
+        "text": "광고보고"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\PopupRubyShop.tscn": [{
+        "line": 13,
+        "text": "루비 팝업"
+    }, {
+        "line": 14,
+        "text": "루비"
+    }, {
+        "line": 14,
+        "text": "패키지"
+    }, {
+        "line": 38,
+        "text": "상품 복구하기"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\PopupSmallNotice.tscn": [{
+        "line": 44,
+        "text": "알림"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\PopupStoneSkin.tscn": [{
+        "line": 44,
+        "text": "돌 스킨"
+    }, {
+        "line": 45,
+        "text": "스킨 목록"
+    }, {
+        "line": 121,
+        "text": "매력포인트 : 999"
+    }, {
+        "line": 160,
+        "text": "돌 스킨은 착용하지 않아도 능력치가 중첩해서 적용됩니다"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\PopupTutorial.tscn": [{
+        "line": 536,
+        "text": "랜덤으로 뽑히는 카드를 터치해서 모아이를 구매하세요"
+    }, {
+        "line": 562,
+        "text": "아이템 상점 에서 구매한 아이템을 모아이에게 장착시킬 수 있습니다"
+    }, {
+        "line": 573,
+        "text": "저렴한 아이템끼리 조합하면 고가의 아이템으로 합성할 수 있습니다"
+    }, {
+        "line": 584,
+        "text": "필드에 모아이를 배치해서 아기모아이를 지켜주세요!"
+    }, {
+        "line": 594,
+        "text": "몬스터 이동경로"
+    }, {
+        "line": 605,
+        "text": "시너지"
+    }, {
+        "line": 650,
+        "text": "모아이 어셈블"
+    }, {
+        "line": 662,
+        "text": "기본 공격력 + 15"
+    }, {
+        "line": 676,
+        "text": "지급된 돌을 활용해서 적의 이동경로를 전략적으로 막아보세요"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\PopupTutorialDesert.tscn": [{
+        "line": 212,
+        "text": "※ 사막 맵에서 몬스터의 등장 위치는 하단 중앙으로 고정됩니다."
+    }, {
+        "line": 248,
+        "text": "전투가 종료될 때 모아이의 온도가 1씩 오릅니다."
+    }, {
+        "line": 271,
+        "text": "너무 더워~"
+    }, {
+        "line": 290,
+        "text": "(사용 불가)"
+    }, {
+        "line": 304,
+        "text": "모아이의 온도가 10(최대)까지 상승하면 스킬을 사용하지 않게됩니다."
+    }, {
+        "line": 331,
+        "text": "편-안"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\PopupTwoButton.tscn": [{
+        "line": 45,
+        "text": "알림"
+    }, {
+        "line": 109,
+        "text": "네"
+    }, {
+        "line": 134,
+        "text": "아니오"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\RewardIcon.tscn": [{
+        "line": 51,
+        "text": "돌 획득"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\RewardMessage.tscn": [{
+        "line": 170,
+        "text": "알림"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\RubyChanceGroup.tscn": [{
+        "line": 44,
+        "text": "0 루비 사용하고 부활하기"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\RubyShopButton.tscn": [{
+        "line": 47,
+        "text": "루비 상점"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\SynergyNameLabel.tscn": [{
+        "line": 57,
+        "text": "패키지 구매하기"
+    }, {
+        "line": 77,
+        "text": "시너지"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\Title.tscn": [{
+        "line": 319,
+        "text": "터치하면 시작합니다"
+    }, {
+        "line": 336,
+        "text": "※ 게임을 삭제하면 데이터도 삭제됩니다"
+    }]
+}, {
+    "C:\\git\\Moai\\Scenes\\Main\\Moai\\Moai.tscn": [{
+        "line": 581,
+        "text": "킬"
+    }]
 }]

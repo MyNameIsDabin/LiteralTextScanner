@@ -29,20 +29,26 @@ const argv = require('yargs')
         description: '텍스트 배열로만 뽑기'
     })
     .argv;
+
 const DEFAULT_JSON_FILE_NAME = "output.json";
 
 const readFileContents = async (dir, extList) => {
     const bufferToString = (buffer) => buffer.toString().split('\n');
     const filePath = (dir, fileName) => path.join(dir, fileName);
-    const files = (await fsPromises.readdir(dir)).filter((fileName) => !extList || extList.includes(path.extname(fileName).replace(".", "")));
-    const buffers = await Promise.all(files.map((fileName) => fsPromises.readFile(filePath(dir, fileName))));
-    const fileDatas = files.map((fileName, index) => {
-        return {
-            'filePath': filePath(dir, fileName),
-            'contents': bufferToString(buffers[index])
-        }
-    });
-    return fileDatas;
+    const files = await fsPromises.readdir(dir, { withFileTypes: true });
+    const fileNames = files
+        .filter((dirent) => !extList || extList.includes(path.extname(dirent.name).replace(".", "")))
+        .map((dirent) => dirent.name);
+    const direNames = files
+        .filter((dirent) => dirent.isDirectory())
+        .map((dirent) => dirent.name);
+    const fileDataDirectory = await Promise.all(direNames.map((direName) => readFileContents(path.join(dir, direName), extList)));
+    const buffers = await Promise.all(fileNames.map((fileName) => fsPromises.readFile(filePath(dir, fileName))));
+    const fileDataList = fileNames.map((fileName, index) => ({
+        'filePath': filePath(dir, fileName),
+        'contents': bufferToString(buffers[index])
+    }));
+    return fileDataList.concat(...fileDataDirectory);
 };
 
 const findLiteralTextList = (text, regex) => {
