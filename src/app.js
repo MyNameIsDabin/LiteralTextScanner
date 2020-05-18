@@ -86,13 +86,18 @@ const fileContentsToJSONArray = (fileContents, regex, isOnlyText) => {
     return isOnlyText ? textArr : jsonArr;
 }
 
+const trim = (text) => text.replace(/\s/gi, "");
+
 if (argv.dir) {
+    const dirList = argv.dir.split(",").map(dir=>trim(dir));
     const regExp = new RegExp(argv.regex);
     regExp.global = argv.global || false;
     (async () => {
-        const fileContents = await readFileContents(argv.dir);
-        let jsonArr = fileContentsToJSONArray(fileContents, regExp, argv.onlytext);
-        await fsPromises.writeFile(path.join(argv.output || DEFAULT_JSON_FILE_NAME), JSON.stringify(jsonArr));
+        dirList.forEach(dir=>{
+            const fileContents = await readFileContents(dir);
+            let jsonArr = fileContentsToJSONArray(fileContents, regExp, argv.onlytext);
+            await fsPromises.writeFile(path.join(argv.output || DEFAULT_JSON_FILE_NAME), JSON.stringify(jsonArr));
+        })
         console.log("추출 완료");
     })();
 }

@@ -3,7 +3,7 @@
 
 예제) 한글이 포함된 리터럴 문자열 부분을 찾아서 추출.
 ```
-node src/app.js scan "C:\git\Moai\GDScripts" --regex "[가-힣]" --output "output.json" --onlytext true
+node src/app.js scan "C:\git\Moai\GDScripts, C:\git\Moai\Scenes" --regex "[가-힣]" --output "output.json" --onlytext true
 ```
 
 결과)
